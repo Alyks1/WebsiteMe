@@ -1,0 +1,56 @@
+@font-face {
+    font-family: MPLUS_Regular;
+    src: url(../fonts/MPLUS1-Regular.ttf);
+}
+
+:root {
+    --color-text: #2F2A24;
+    --color-background: #F5F0E8;
+    --color-highlights: #A67C52;
+    --color-navBarA: #6B4F3A;
+}
+
+body {
+    font-family: 'MPLUS_Regular', monospace;
+    margin: auto;
+    max-width: 1280px;
+    color: var(--color-text);
+    background: var(--color-background);
+}
+
+.navbar {
+    background: var(--color-background);
+    max-width: fit-content;
+}
+.navbar a {
+    color: var(--color-navBarA);
+    display: inline-block;
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: var(--color-highlights);
+}
+
+.nav-line {
+    height: 1px;
+    background: var(--color-highlights);
+}
+
+.accent-line {
+    width: 40px;
+    height: 2px;
+    background: var(--color-highlights);
+    margin: 1.5rem 0;
+}
+
+.home-top {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.home-top img {
+    width: 220px;
+}
