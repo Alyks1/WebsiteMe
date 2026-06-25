@@ -18,14 +18,7 @@ body {
     background: var(--color-background);
 }
 
-/* Navigation Bar Styles 
-a:link {
-    color: var(--color-navBarA);
-}
-
-a:visited {
-    color: var(--color-navBarA);
-}*/
+/*Home*/
 
 .topnav {
     background: var(--color-background);
@@ -68,4 +61,11 @@ a:visited {
 }
 .home-top div {
     max-width: 40%;
+}
+
+/*Photography*/
+
+.highlight-image {
+    width: 20%;
+    margin: 5px;
 }
