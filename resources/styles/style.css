@@ -64,8 +64,11 @@ body {
 }
 
 /*Photography*/
-
+#highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 .highlight-image {
-    width: 20%;
-    margin: 5px;
+    height: 490px;
 }

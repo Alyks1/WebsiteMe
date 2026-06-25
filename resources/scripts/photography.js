@@ -8,16 +8,8 @@ fetch('https://api.github.com/repos/Alyks1/WebsiteMe/contents/photos/highlights'
 
         images.forEach(f => {
             const img = document.createElement('img');
-            img.onload = () => {
-                img.classList.add('highlight-image');
-                if (img.naturalWidth > img.naturalHeight) {
-                    img.style.marginBottom = '156px';
-                }
-                document.getElementById('highlights').appendChild(img);
-            };
-            
-            
+            img.classList.add('highlight-image');
             img.src = f.download_url;
-            
+            document.getElementById('highlights').appendChild(img);
         });
     });
