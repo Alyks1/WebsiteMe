@@ -18,18 +18,30 @@ body {
     background: var(--color-background);
 }
 
-.navbar {
+/* Navigation Bar Styles 
+a:link {
+    color: var(--color-navBarA);
+}
+
+a:visited {
+    color: var(--color-navBarA);
+}*/
+
+.topnav {
     background: var(--color-background);
     max-width: fit-content;
+    margin-top: 0.5rem;
 }
-.navbar a {
+
+.topnav a {
     color: var(--color-navBarA);
     display: inline-block;
     font-size: 15px;
     padding: 10px;
     text-decoration: none;
 }
-.navbar a:hover {
+
+.topnav a:hover {
     color: var(--color-highlights);
 }
 
@@ -48,9 +60,12 @@ body {
 .home-top {
     display: flex;
     gap: 3rem;
-    align-items: center;
 }
-
 .home-top img {
-    width: 220px;
+    border-radius: 5px;
+    width: 500px;
+    margin-top: 200px;
+}
+.home-top div {
+    max-width: 40%;
 }
