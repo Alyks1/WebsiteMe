@@ -38,4 +38,3 @@ async function loadGallery(htmlFile, folderName) {
 
 loadHighlights();
 loadGallery('subpages/classicNegative.html', 'classicNegative');
-loadGallery('subpages/classicNegative.html', 'classicNegative');
