@@ -1,0 +1,41 @@
+name: Update Image Index
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate image index
+        run: |
+          python3 - <<'EOF'
+          import os
+          import json
+
+          index = {}
+          photos_dir = 'photos'
+
+          for folder in os.listdir(photos_dir):
+            folder_path = os.path.join(photos_dir, folder)
+            if os.path.isdir(folder_path):
+              images = [
+                f for f in os.listdir(folder_path)
+                if f.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp'))
+              ]
+              index[folder] = images
+
+          with open('index.json', 'w') as f:
+            json.dump(index, f, indent=2)
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add index.json
+          git diff --staged --quiet || git commit -m "Update image index"
+          git push
