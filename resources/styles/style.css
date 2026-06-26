@@ -16,6 +16,8 @@ body {
     max-width: 1280px;
     color: var(--color-text);
     background: var(--color-background);
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /*Home*/
@@ -67,4 +69,9 @@ body {
 .highlight-image {
     height: 240px;
     margin: 2.5px;
+}
+
+.gallery {
+    height: 240px;
+    overflow-x: auto;
 }
