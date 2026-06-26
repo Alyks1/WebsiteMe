@@ -5,6 +5,7 @@ async function loadImages(folderName) {
         const res = await fetch('index.json');
         imageIndex = await res.json();
     }
+
     return imageIndex[folderName].map(name => `photos/${folderName}/${name}`);
 }
 
@@ -27,12 +28,12 @@ async function loadGallery(htmlFile, folderName) {
     div.innerHTML = html;
     document.querySelector('#gallery').appendChild(div);
 
-    images.forEach(f => {
+    images.forEach(image => {
         const img = document.createElement('img');
-        img.src = f.download_url;
+        img.src = image;
         document.querySelector(`#${folderName}Images`).appendChild(img);
     });
 }
 
-loadHighlights('highlights');
+loadHighlights();
 loadGallery('subpages/classicNegative.html', 'classicNegative');
