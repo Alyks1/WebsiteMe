@@ -12,10 +12,7 @@ async function loadImages(folderName) {
 async function loadHighlights() {
     const images = await loadImages('highlights');
 
-    images
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 6)
-        .forEach(image => {
+    images.forEach(image => {
             const img = document.createElement('img');
             img.classList.add('photos-image');
             img.src = image;
@@ -40,4 +37,5 @@ async function loadGallery(htmlFile, folderName) {
 }
 
 loadHighlights();
+loadGallery('subpages/classicNegative.html', 'classicNegative');
 loadGallery('subpages/classicNegative.html', 'classicNegative');

@@ -84,4 +84,9 @@ body {
     height: 260px;
     overflow-x: auto;
     flex-wrap: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-highlights) transparent;
+}
+.gallery::-webkit-scrollbar-button {
+    display: none;
 }
