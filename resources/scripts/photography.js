@@ -12,11 +12,14 @@ async function loadImages(folderName) {
 async function loadHighlights() {
     const images = await loadImages('highlights');
 
-    images.forEach(f => {
-        const img = document.createElement('img');
-        img.classList.add('highlight-image');
-        img.src = f.download_url;
-        document.getElementById('highlights').appendChild(img);
+    images
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 6)
+        .forEach(image => {
+            const img = document.createElement('img');
+            img.classList.add('photos-image');
+            img.src = image;
+            document.getElementById('highlights').appendChild(img);
     });
 }
 
@@ -30,6 +33,7 @@ async function loadGallery(htmlFile, folderName) {
 
     images.forEach(image => {
         const img = document.createElement('img');
+        img.classList.add('photos-image');
         img.src = image;
         document.querySelector(`#${folderName}Images`).appendChild(img);
     });

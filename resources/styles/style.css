@@ -66,12 +66,14 @@ body {
 }
 
 /*Photography*/
-.highlight-image {
+.photos-image {
     height: 240px;
     margin: 2.5px;
 }
 
 .gallery {
-    height: 240px;
+    display: flex;
+    height: 260px;
     overflow-x: auto;
+    flex-wrap: nowrap;
 }
