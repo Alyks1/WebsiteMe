@@ -34,5 +34,5 @@ async function loadGallery(htmlFile, folderName) {
     });
 }
 
-await loadHighlights('highlights');
-await loadGallery('subpages/classicNegative.html', 'classicNegative');
+loadHighlights('highlights');
+loadGallery('subpages/classicNegative.html', 'classicNegative');
