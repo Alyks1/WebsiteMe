@@ -20,9 +20,9 @@ async function loadHighlights() {
     });
 }
 
-async function loadGallery(htmlFile, folderName) {
-    const images = await loadImages(folderName);
-    const response = await fetch(htmlFile);
+async function loadGallery(fileName) {
+    const images = await loadImages(fileName);
+    const response = await fetch(`subpages/${fileName}.html`);
     const html = await response.text();
     const div = document.createElement('div');
     div.innerHTML = html;
@@ -32,10 +32,16 @@ async function loadGallery(htmlFile, folderName) {
         const img = document.createElement('img');
         img.classList.add('photos-image');
         img.src = image;
-        document.querySelector(`#${folderName}Images`).appendChild(img);
+        document.querySelector(`#${fileName}Images`).appendChild(img);
     });
 }
 
 loadHighlights();
-loadGallery('subpages/classicNegative.html', 'classicNegative');
-loadGallery('subpages/nostalgicNegative.html', 'nostalgicNegative');
+fetch('recipes.json')
+    .then(res => res.json())
+    .then(files => {
+        return Promise.all(files.map(f => loadGallery(f.name)));
+    })
+    .then(() => {
+        initLightbox();
+    });

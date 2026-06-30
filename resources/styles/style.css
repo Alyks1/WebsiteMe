@@ -84,6 +84,7 @@ footer {
 .photos-image {
     height: 240px;
     margin: 2.5px;
+    cursor: pointer;
 }
 
 .gallery {
@@ -92,6 +93,58 @@ footer {
     flex-wrap: nowrap;
     scrollbar-width: thin;
     scrollbar-color: var(--color-highlights) transparent;
+}
+
+/* Lightbox overlay */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 6px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.lightbox .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 20px;
+}
+
+.lightbox .prev {
+    left: 10px;
+}
+
+.lightbox .next {
+    right: 10px;
 }
 
 /*Recommendations*/
