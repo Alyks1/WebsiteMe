@@ -23,6 +23,10 @@ body {
     padding-right: 1rem;
 }
 
+footer {
+    height: 100px;
+}
+
 /*Home*/
 .topnav {
     background: var(--color-background);
@@ -86,4 +90,50 @@ body {
     flex-wrap: nowrap;
     scrollbar-width: thin;
     scrollbar-color: var(--color-highlights) transparent;
+}
+
+/*Recommendations*/
+.recommendation-text {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.recommendation-text ul {
+    flex: 1;
+}
+
+.divider-line {
+    width: auto;
+    height: 2px;
+    background: var(--color-highlights);
+    margin: 1.5rem 0;
+}
+
+.other-place {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.other-place-header {
+    margin:0;
+}
+
+.recommendations img {
+    display: flex;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .recommendation-text {
+        flex-direction: column;
+    }
+
+    .recommendation-text img {
+        max-width: 100%;
+    }
 }
