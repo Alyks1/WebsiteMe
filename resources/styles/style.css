@@ -158,6 +158,14 @@ footer {
     flex: 1;
 }
 
+.recommendations img {
+    display: flex;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
 .divider-line {
     width: auto;
     height: 2px;
@@ -175,12 +183,9 @@ footer {
     margin: 0;
 }
 
-.recommendations img {
-    display: flex;
-    border-radius: 5px;
-    max-width: 500px;
-    width: 100%;
-    height: auto;
+.small-width-image {
+    max-width: 250px !important;
+    align-self: center;
 }
 
 /* Responsive Design */
