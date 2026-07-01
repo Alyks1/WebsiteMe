@@ -166,13 +166,13 @@ footer {
 }
 
 .other-place {
-    display: flex;
     align-items: baseline;
+    margin-bottom: 0.5rem;
     gap: 8px;
 }
 
 .other-place-header {
-    margin:0;
+    margin: 0;
 }
 
 .recommendations img {
