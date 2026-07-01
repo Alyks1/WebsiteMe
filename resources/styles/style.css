@@ -212,6 +212,11 @@ footer {
         background-color: rgba(0,0,0,0.05); 
     }
 
+    .nav-line {
+        display: none;
+    }
+
+    /* Home */
     .home-top {
         flex-direction: column-reverse;
         align-items: start;
@@ -228,6 +233,14 @@ footer {
         max-width: 100%;
     }
 
+    /* Photography */
+    .recipe-div {
+        margin-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Recommendations */
     .recommendation-text {
         flex-direction: column;
     }
