@@ -74,6 +74,11 @@ footer {
     max-width: 40%;
 }
 
+.contact-link {
+    color: var(--color-text);
+    font-size: 24px;
+}
+
 /*Photography*/
 .recipe-div {
     margin-top: 1rem;
