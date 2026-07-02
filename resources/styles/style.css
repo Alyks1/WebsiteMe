@@ -4,10 +4,10 @@
 }
 
 :root {
-    --color-text: #2F2A24;
-    --color-background: #F5F0E8;
+    --color-text: #372816;
+    --color-background: #FFF9F0;
     --color-highlights: #A67C52;
-    --color-navBarA: #6B4F3A;
+    --color-navBarA: #793401;
     --color-classicNegative: #D9D9D9;
     --color-nostalgicNegative: #C2956B;
     scrollbar-width: thin;
@@ -48,8 +48,10 @@ footer {
 }
 
 .nav-line {
-    height: 1px;
+    height: 2px;
     background: var(--color-highlights);
+    color: var(--color-highlights);
+    border: none;
 }
 
 .accent-line {
