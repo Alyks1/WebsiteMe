@@ -45,14 +45,14 @@ function renderGallery({ fileName, images, html }) {
     appendImages(document.querySelector(`#${fileName}Images`), images);
 }
 
-loadHighlights();
-
-fetch('recipes.json')
-    .then(res => res.json())
-    .then(async files => {
-        const dataList = await Promise.all(files.map(f => fetchGalleryData(f.name)));
-        dataList.forEach(renderGallery);
-    })
-    .then(() => {
-        initLightbox();
-    });
+Promise.all([
+    loadHighlights(),
+    fetch('recipes.json')
+        .then(res => res.json())
+        .then(async files => {
+            const dataList = await Promise.all(files.map(f => fetchGalleryData(f.name)));
+            dataList.forEach(renderGallery);
+        })
+]).then(() => {
+    initLightbox();
+});
